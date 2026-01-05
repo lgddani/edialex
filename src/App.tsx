@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/edialex">
       <ScrollToTop />
       <div className="app">
         <Navbar />
