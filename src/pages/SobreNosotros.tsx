@@ -11,25 +11,25 @@ const SobreNosotros = () => {
       id: 1,
       titulo: 'Calidad Garantizada',
       descripcion: 'Solo ofrecemos productos de marcas reconocidas y certificadas',
-      icono: getImagePath('/images/iconos/calidad.png')
+      icono: getImagePath('//images/iconos/calidad.png')
     },
     {
       id: 2,
       titulo: 'Asesoría Experta',
       descripcion: 'Nuestro equipo está capacitado para guiarte en tu proyecto',
-      icono: getImagePath('/images/iconos/asesoria.png')
+      icono: getImagePath('//images/iconos/asesoria.png')
     },
     {
       id: 3,
       titulo: 'Precios Justos',
       descripcion: 'Los mejores precios del mercado sin comprometer la calidad',
-      icono: getImagePath('/images/iconos/precios.png')
+      icono: getImagePath('//images/iconos/precios.png')
     },
     {
       id: 4,
       titulo: 'Compromiso',
       descripcion: 'Comprometidos con la satisfacción total de nuestros clientes',
-      icono: getImagePath('/images/iconos/compromiso.png')
+      icono: getImagePath('//images/iconos/compromiso.png')
     }
   ];
 
@@ -62,14 +62,14 @@ const SobreNosotros = () => {
 
   // Marcas - Puedes agregar los logos reales después
   const marcas = [
-    { id: 1, nombre: 'Bosch', logo: getImagePath('/images/marcas/bosch.png') },
-    { id: 2, nombre: 'DeWalt', logo: getImagePath('/images/marcas/dewalt.png') },
-    { id: 3, nombre: 'Makita', logo: getImagePath('/images/marcas/makita.png') },
-    { id: 4, nombre: 'Stanley', logo: getImagePath('/images/marcas/stanley.png') },
-    { id: 5, nombre: 'Black & Decker', logo: getImagePath('/images/marcas/blackdecker.png') },
-    { id: 6, nombre: 'Truper', logo: getImagePath('/images/marcas/truper.png') },
-    { id: 7, nombre: 'Sika', logo: getImagePath('/images/marcas/sika.png') },
-    { id: 8, nombre: 'Conduit', logo: getImagePath('/images/marcas/conduit.png') }
+    { id: 1, nombre: 'Bosch', logo: getImagePath('//images/marcas/bosch.png') },
+    { id: 2, nombre: 'DeWalt', logo: getImagePath('//images/marcas/dewalt.png') },
+    { id: 3, nombre: 'Makita', logo: getImagePath('//images/marcas/makita.png') },
+    { id: 4, nombre: 'Stanley', logo: getImagePath('//images/marcas/stanley.png') },
+    { id: 5, nombre: 'Black & Decker', logo: getImagePath('//images/marcas/blackdecker.png') },
+    { id: 6, nombre: 'Truper', logo: getImagePath('//images/marcas/truper.png') },
+    { id: 7, nombre: 'Sika', logo: getImagePath('//images/marcas/sika.png') },
+    { id: 8, nombre: 'Conduit', logo: getImagePath('//images/marcas/conduit.png') }
   ];
 
   return (
@@ -96,7 +96,7 @@ const SobreNosotros = () => {
             </div>
           </div>
           <div className="sobre-hero-image slide-left">
-            <img src={getImagePath('/images/ferreteria-local.jpg')} alt="Ferretería EDIALEX - Local" className="hero-local-img" />
+            <img src={getImagePath('//images/ferreteria-local.jpg')} alt="Ferretería EDIALEX - Local" className="hero-local-img" />
           </div>
         </div>
       </section>
@@ -106,7 +106,7 @@ const SobreNosotros = () => {
         <div className="mv-container">
           <div className="mv-card mision-card slide-right">
             <div className="mv-icon">
-              <img src={getImagePath('/images/iconos/mision.png')} alt="Misión" />
+              <img src={getImagePath('//images/iconos/mision.png')} alt="Misión" />
             </div>
             <h2>NUESTRA MISIÓN</h2>
             <p>
@@ -118,7 +118,7 @@ const SobreNosotros = () => {
           </div>
           <div className="mv-card vision-card slide-left">
             <div className="mv-icon">
-              <img src={getImagePath('/images/iconos/vision.png')} alt="Visión" />
+              <img src={getImagePath('//images/iconos/vision.png')} alt="Visión" />
             </div>
             <h2>NUESTRA VISIÓN</h2>
             <p>
