@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { WHATSAPP_CONFIG } from '../config/whatsapp';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { getImagePath } from '../utils/paths';
 import './Productos.css';
 
 interface Producto {
@@ -30,12 +31,12 @@ const Productos = () => {
   }, [searchParams]);
 
   const categorias = [
-    { id: 'todos', nombre: 'Todos los Productos', icono: '/images/iconos/ferreteria.png' },
-    { id: 'herramientas', nombre: 'Herramientas Eléctricas', icono: '/images/iconos/herramientas-electricas.png' },
-    { id: 'herramientas-manuales', nombre: 'Herramientas Manuales', icono: '/images/iconos/herramientas-manuales.png' },
-    { id: 'plomeria', nombre: 'Plomería', icono: '/images/iconos/plomeria.png' },
-    { id: 'electricidad', nombre: 'Electricidad', icono: '/images/iconos/electricidad.png' },
-    { id: 'construccion', nombre: 'Construcción', icono: '/images/iconos/construccion.png' },
+    { id: 'todos', nombre: 'Todos los Productos', icono: getImagePath('/images/iconos/ferreteria.png') },
+    { id: 'herramientas', nombre: 'Herramientas Eléctricas', icono: getImagePath('/images/iconos/herramientas-electricas.png') },
+    { id: 'herramientas-manuales', nombre: 'Herramientas Manuales', icono: getImagePath('/images/iconos/herramientas-manuales.png') },
+    { id: 'plomeria', nombre: 'Plomería', icono: getImagePath('/images/iconos/plomeria.png') },
+    { id: 'electricidad', nombre: 'Electricidad', icono: getImagePath('/images/iconos/electricidad.png') },
+    { id: 'construccion', nombre: 'Construcción', icono: getImagePath('/images/iconos/construccion.png') },
   ];
 
   // Productos de ejemplo - Tú los reemplazarás con los reales
@@ -46,7 +47,7 @@ const Productos = () => {
       nombre: 'Taladro Percutor 750W',
       descripcion: 'Taladro percutor profesional con control de velocidad variable y maletín incluido',
       precio: '$89.99',
-      imagen: '/images/productos/taladro.jpg',
+      imagen: getImagePath('/images/productos/taladro.jpg'),
       categoria: 'herramientas'
     },
     {
@@ -54,7 +55,7 @@ const Productos = () => {
       nombre: 'Amoladora Angular 4.5"',
       descripcion: 'Amoladora de alta potencia 900W, ideal para corte y desbaste',
       precio: '$65.00',
-      imagen: '/images/productos/amoladora.jpg',
+      imagen: getImagePath('/images/productos/amoladora.jpg'),
       categoria: 'herramientas'
     },
     {
@@ -62,7 +63,7 @@ const Productos = () => {
       nombre: 'Sierra Circular 7.25"',
       descripcion: 'Sierra circular con guía láser y profundidad de corte ajustable',
       precio: '$125.00',
-      imagen: '/images/productos/sierra.jpg',
+      imagen: getImagePath('/images/productos/sierra.jpg'),
       categoria: 'herramientas'
     },
 
@@ -72,7 +73,7 @@ const Productos = () => {
       nombre: 'Juego de Destornilladores 6 Piezas',
       descripcion: 'Set profesional de destornilladores planos y estrella con mangos ergonómicos',
       precio: '$25.00',
-      imagen: '/images/productos/destornilladores.jpg',
+      imagen: getImagePath('/images/productos/destornilladores.jpg'),
       categoria: 'herramientas-manuales'
     },
     {
@@ -80,7 +81,7 @@ const Productos = () => {
       nombre: 'Martillo de Uña 16oz',
       descripcion: 'Martillo de acero forjado con mango de fibra de vidrio antideslizante',
       precio: '$18.50',
-      imagen: '/images/productos/martillo.jpg',
+      imagen: getImagePath('/images/productos/martillo.jpg'),
       categoria: 'herramientas-manuales'
     },
     {
@@ -88,7 +89,7 @@ const Productos = () => {
       nombre: 'Juego de Llaves Combinadas 12 Piezas',
       descripcion: 'Set de llaves combinadas métricas de 8mm a 19mm, acero cromo-vanadio',
       precio: '$45.00',
-      imagen: '/images/productos/llaves.jpg',
+      imagen: getImagePath('/images/productos/llaves.jpg'),
       categoria: 'herramientas-manuales'
     },
 
@@ -98,7 +99,7 @@ const Productos = () => {
       nombre: 'Tubería PVC 1/2" x 3m',
       descripcion: 'Tubería PVC sanitaria de alta calidad',
       precio: '$4.50',
-      imagen: '/images/productos/tuberia.jpg',
+      imagen: getImagePath('/images/productos/tuberia.jpg'),
       categoria: 'plomeria'
     },
     {
@@ -106,7 +107,7 @@ const Productos = () => {
       nombre: 'Llave de Paso 1/2"',
       descripcion: 'Llave de paso de bronce cromado, alta durabilidad',
       precio: '$12.00',
-      imagen: '/images/productos/llave-paso.jpg',
+      imagen: getImagePath('/images/productos/llave-paso.jpg'),
       categoria: 'plomeria'
     },
     {
@@ -114,7 +115,7 @@ const Productos = () => {
       nombre: 'Grifo Monomando Cocina',
       descripcion: 'Grifo monomando con caño alto, acabado cromado',
       precio: '$55.00',
-      imagen: '/images/productos/grifo.jpg',
+      imagen: getImagePath('/images/productos/grifo.jpg'),
       categoria: 'plomeria'
     },
 
@@ -124,7 +125,7 @@ const Productos = () => {
       nombre: 'Cable AWG #12 x 100m',
       descripcion: 'Cable eléctrico calibre 12 para instalaciones residenciales',
       precio: '$85.00',
-      imagen: '/images/productos/cable.jpg',
+      imagen: getImagePath('/images/productos/cable.jpg'),
       categoria: 'electricidad'
     },
     {
@@ -132,7 +133,7 @@ const Productos = () => {
       nombre: 'Interruptor Doble',
       descripcion: 'Interruptor doble de sobreponer, color blanco',
       precio: '$3.50',
-      imagen: '/images/productos/interruptor.jpg',
+      imagen: getImagePath('/images/productos/interruptor.jpg'),
       categoria: 'electricidad'
     },
     {
@@ -140,7 +141,7 @@ const Productos = () => {
       nombre: 'Tomacorriente Doble',
       descripcion: 'Tomacorriente polarizado doble con tierra',
       precio: '$4.00',
-      imagen: '/images/productos/tomacorriente.jpg',
+      imagen: getImagePath('/images/productos/tomacorriente.jpg'),
       categoria: 'electricidad'
     },
 
@@ -150,7 +151,7 @@ const Productos = () => {
       nombre: 'Cemento Gris 50kg',
       descripcion: 'Cemento Portland tipo I para construcción general',
       precio: '$8.50',
-      imagen: '/images/productos/cemento.jpg',
+      imagen: getImagePath('/images/productos/cemento.jpg'),
       categoria: 'construccion'
     },
     {
@@ -158,7 +159,7 @@ const Productos = () => {
       nombre: 'Ladrillo Rojo 6 Huecos',
       descripcion: 'Ladrillo cerámico de 6 huecos para mampostería',
       precio: '$0.35',
-      imagen: '/images/productos/ladrillo.jpg',
+      imagen: getImagePath('/images/productos/ladrillo.jpg'),
       categoria: 'construccion'
     },
     {
@@ -166,7 +167,7 @@ const Productos = () => {
       nombre: 'Adhesivo para Cerámica 25kg',
       descripcion: 'Pegamento para porcelanato y cerámica de alto agarre',
       precio: '$15.00',
-      imagen: '/images/productos/adhesivo.jpg',
+      imagen: getImagePath('/images/productos/adhesivo.jpg'),
       categoria: 'construccion'
     },
   ];

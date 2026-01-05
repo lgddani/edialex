@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { WHATSAPP_CONFIG } from '../config/whatsapp';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { getImagePath } from '../utils/paths';
 import './Home.css';
 
 const Home = () => {
@@ -69,12 +70,12 @@ const Home = () => {
   };
 
   const categorias = [
-    { id: 1, slug: 'herramientas', nombre: 'Herramientas Eléctricas', icono: '/images/iconos/herramientas-electricas.png', color: '#ff6b35' },
-    { id: 2, slug: 'herramientas-manuales', nombre: 'Herramientas Manuales', icono: '/images/iconos/herramientas-manuales.png', color: '#f7b801' },
-    { id: 3, slug: 'plomeria', nombre: 'Plomería', icono: '/images/iconos/plomeria.png', color: '#4ecdc4' },
-    { id: 4, slug: 'electricidad', nombre: 'Electricidad', icono: '/images/iconos/electricidad.png', color: '#95e1d3' },
-    { id: 5, slug: 'construccion', nombre: 'Construcción', icono: '/images/iconos/construccion.png', color: '#ff9a76' },
-    { id: 6, slug: 'todos', nombre: 'Ferretería', icono: '/images/iconos/ferreteria.png', color: '#a8dadc' }
+    { id: 1, slug: 'herramientas', nombre: 'Herramientas Eléctricas', icono: getImagePath('/images/iconos/herramientas-electricas.png'), color: '#ff6b35' },
+    { id: 2, slug: 'herramientas-manuales', nombre: 'Herramientas Manuales', icono: getImagePath('/images/iconos/herramientas-manuales.png'), color: '#f7b801' },
+    { id: 3, slug: 'plomeria', nombre: 'Plomería', icono: getImagePath('/images/iconos/plomeria.png'), color: '#4ecdc4' },
+    { id: 4, slug: 'electricidad', nombre: 'Electricidad', icono: getImagePath('/images/iconos/electricidad.png'), color: '#95e1d3' },
+    { id: 5, slug: 'construccion', nombre: 'Construcción', icono: getImagePath('/images/iconos/construccion.png'), color: '#ff9a76' },
+    { id: 6, slug: 'todos', nombre: 'Ferretería', icono: getImagePath('/images/iconos/ferreteria.png'), color: '#a8dadc' }
   ];
 
   const testimonios = [
@@ -142,7 +143,7 @@ const Home = () => {
           </div>
         </div>
         <div className="hero-image-container slide-right">
-          <img src="/images/hero-ferreteria.jpg" alt="Ferretería EDIALEX - Herramientas y Construcción" className="hero-image" />
+          <img src={getImagePath('/images/hero-ferreteria.jpg')} alt="Ferretería EDIALEX - Herramientas y Construcción" className="hero-image" />
         </div>
       </section>
 
