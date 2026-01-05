@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={cerrarMenu}>
-          <img src={getImagePath('/images/logo.jpeg')} alt="Ferretería EDIALEX" className="navbar-logo-img" />
+          <img src={getImagePath('//images/logo.jpeg')} alt="Ferretería EDIALEX" className="navbar-logo-img" />
         </Link>
 
         {/* Botón Hamburguesa */}
