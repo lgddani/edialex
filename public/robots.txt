@@ -1,0 +1,11 @@
+# www.robotstxt.org/
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow specific paths (if any)
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://www.edialex.com/sitemap.xml

@@ -1,0 +1,242 @@
+/* Variables */
+:root {
+  --verde-principal: #00d000;
+  --verde-oscuro: #00a800;
+  --gris-oscuro: #2b2b2b;
+  --negro: #1a1a1a;
+  --blanco: #ffffff;
+}
+
+.notfound-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--negro) 0%, var(--gris-oscuro) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Patrón de fondo */
+.notfound-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 50px,
+      rgba(0, 208, 0, 0.02) 50px,
+      rgba(0, 208, 0, 0.02) 100px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50px,
+      rgba(0, 208, 0, 0.02) 50px,
+      rgba(0, 208, 0, 0.02) 100px
+    );
+  pointer-events: none;
+}
+
+.notfound-container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  width: 100%;
+}
+
+.notfound-content {
+  text-align: center;
+  background: rgba(26, 26, 26, 0.8);
+  padding: 4rem 3rem;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 208, 0, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.error-code {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 10rem;
+  font-weight: 700;
+  color: var(--verde-principal);
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 30px rgba(0, 208, 0, 0.5);
+  letter-spacing: -5px;
+}
+
+.error-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blanco);
+  margin-bottom: 1rem;
+  letter-spacing: 3px;
+}
+
+.error-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.notfound-icon {
+  margin: 2rem 0;
+}
+
+.notfound-icon i {
+  font-size: 5rem;
+  color: var(--verde-principal);
+  opacity: 0.3;
+}
+
+.notfound-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.btn-home,
+.btn-productos {
+  padding: 1rem 2.5rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.btn-home {
+  background: var(--verde-principal);
+  color: var(--negro);
+  border: 3px solid var(--verde-principal);
+}
+
+.btn-home:hover {
+  background: transparent;
+  color: var(--verde-principal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 208, 0, 0.3);
+}
+
+.btn-productos {
+  background: transparent;
+  color: var(--blanco);
+  border: 3px solid var(--blanco);
+}
+
+.btn-productos:hover {
+  background: var(--blanco);
+  color: var(--negro);
+  transform: translateY(-2px);
+}
+
+.quick-links {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quick-links p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.quick-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(0, 208, 0, 0.05);
+  border: 1px solid rgba(0, 208, 0, 0.2);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--blanco);
+  transition: all 0.3s ease;
+}
+
+.quick-link:hover {
+  background: rgba(0, 208, 0, 0.15);
+  border-color: var(--verde-principal);
+  transform: translateY(-3px);
+}
+
+.quick-link i {
+  font-size: 1.5rem;
+  color: var(--verde-principal);
+}
+
+.quick-link span {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 6rem;
+  }
+
+  .error-title {
+    font-size: 2rem;
+  }
+
+  .notfound-content {
+    padding: 3rem 2rem;
+  }
+
+  .notfound-actions {
+    flex-direction: column;
+  }
+
+  .btn-home,
+  .btn-productos {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 4rem;
+  }
+
+  .error-title {
+    font-size: 1.5rem;
+  }
+
+  .error-description {
+    font-size: 1rem;
+  }
+
+  .notfound-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
+}
