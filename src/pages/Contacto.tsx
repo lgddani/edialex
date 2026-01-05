@@ -1,4 +1,5 @@
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 import { WHATSAPP_CONFIG } from '../config/whatsapp';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Contacto.css';
