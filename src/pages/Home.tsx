@@ -70,7 +70,7 @@ const Home = () => {
   };
 
   const categorias = [
-    { id: 1, slug: 'herramientas', nombre: 'Herramientas Eléctricas', icono: getImagePath('/images/iconos/herramientas-electricas.png'), color: '#ff6b35' },
+    { id: 1, slug: 'herramientas', nombre: 'Herramientas Eléctricas', icono: '/images/iconos/herramientas-electricas.png', color: '#ff6b35' },
     { id: 2, slug: 'herramientas-manuales', nombre: 'Herramientas Manuales', icono: getImagePath('/images/iconos/herramientas-manuales.png'), color: '#f7b801' },
     { id: 3, slug: 'plomeria', nombre: 'Plomería', icono: getImagePath('/images/iconos/plomeria.png'), color: '#4ecdc4' },
     { id: 4, slug: 'electricidad', nombre: 'Electricidad', icono: getImagePath('/images/iconos/electricidad.png'), color: '#95e1d3' },
